@@ -35,7 +35,7 @@ class DB
         if (isset($args[0]) && is_array($args[0])) {
             $sql .= " WHERE " . join(" && ", $this->arrayToSqlArray($args[0]));
         } elseif (isset($args[0])) {
-            $sql .= " WHERE " . $args[0];
+            $sql .= $args[0];
         }
 
         if (isset($args[1]) && is_array($args[1])) {
@@ -64,7 +64,7 @@ class DB
         if (is_array($args)) {
             $sql .= join(" && ", $this->arrayToSqlArray($args));
         } else {
-            $sql .= $args;
+            $sql .= "`id`=" . $args;
         }
 
         return $this->pdo->exec($sql);
@@ -87,7 +87,7 @@ class DB
             // prr($keys);
             $sql = "INSERT INTO `$this->table`(" . join(",", $keys) . ") VALUES (" . join(",", $values) . ")";
         }
-        echo $sql;
+        // echo $sql;
         return $this->pdo->exec($sql);
     }
 

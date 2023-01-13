@@ -1,8 +1,8 @@
 <div style="display:flex;">
-    <div class="tab">健康新知</div>
-    <div class="tab">菸害防制</div>
-    <div class="tab">癌症防治</div>
-    <div class="tab">慢性病防治</div>
+    <div class="tab clo">健康新知</div>
+    <div class="tab clo">菸害防制</div>
+    <div class="tab clo">癌症防治</div>
+    <div class="tab clo">慢性病防治</div>
 </div>
 
 <div class="box">
