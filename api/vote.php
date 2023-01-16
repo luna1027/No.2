@@ -10,5 +10,5 @@ $option = $$table->find($_POST['id']);
 $option['count']++;
 $$table->save($option);
 
-to('../index.php?do=' . lcfirst($table));
+to('../index.php?do=result&id='.$_POST['subject_id']);
 ?>

@@ -8,12 +8,19 @@ $Po = new DB('po');
 $News = new DB('news');
 $Know = new DB('know');
 $Que = new DB('que');
+$Log = new DB('log');
 
 class DB
 {
     protected $dsn = "mysql:host=localhost;charset=utf8;dbname=db10";
     protected $table;
     protected $pdo;
+    public $type = [
+        1 => '健康新知',
+        2 => '菸害防治',
+        3 => '癌症防治',
+        4 => '慢性病防治'
+    ];
 
     public function __construct($table)
     {
@@ -87,7 +94,7 @@ class DB
             // prr($keys);
             $sql = "INSERT INTO `$this->table`(" . join(",", $keys) . ") VALUES (" . join(",", $values) . ")";
         }
-        // echo $sql;
+        echo $sql;
         return $this->pdo->exec($sql);
     }
 

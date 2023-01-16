@@ -274,7 +274,7 @@ input[type=radio] {
 	padding: 3px;
 	min-width: 30px;
 	min-height: 30px;
-	
+
 }
 
 /* .tab {
@@ -340,6 +340,25 @@ input[type=radio] {
 	border-bottom: #fff;
 }
 
-.bg-g{
+.bg-g {
 	background: #ccc;
+}
+
+.news-title {
+	cursor: pointer;
+	background: #eee;
+}
+
+.full {
+	display: none;
+	position: absolute;
+	width: 95%;
+	height: 500px;
+	overflow: auto;
+	background-color: rgb(100, 100, 100);
+	z-index: 99;
+	padding: 1rem;
+	box-shadow: 0 0 10px #999;
+	left: -10px;
+	top: 5px;
 }
